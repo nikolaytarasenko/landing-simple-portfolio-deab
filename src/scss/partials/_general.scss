@@ -26,3 +26,22 @@ a {
     color: $color-blue;
     text-decoration: none;
 }
+
+ul {
+    list-style: none;
+}
+
+.section-title {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: -70px;
+        transform: rotate(-90deg);
+        color: $color-main;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $color-gray;
+    }
+}

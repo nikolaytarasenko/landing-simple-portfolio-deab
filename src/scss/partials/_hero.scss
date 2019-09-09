@@ -1,4 +1,6 @@
 .hero {
+    margin-bottom: 120px;
+    
     &__welcome {
         max-width: 550px;
         margin: 0 auto;
@@ -17,7 +19,26 @@
         color: $color-blue;
     }
 
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__social-link {
         margin: 0 15px;
+        font-size: 0;
+        vertical-align: middle;
+
+        svg {
+            transition: all 0.1s linear;
+        }
+
+        &:hover {
+            svg {
+                fill: $color-blue;
+                transform: scale(1.1);
+            }
+        }
     }
 }
