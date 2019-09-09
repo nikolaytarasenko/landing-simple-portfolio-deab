@@ -1,0 +1,53 @@
+.about {
+    margin-bottom: 120px;
+
+    .section-title {
+        &::before {
+            content: 'about';
+            top: 17px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 60px;
+    }
+
+    &__title {
+        font-size: 1.86rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        font-size: 1.06rem;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    &__blue-text {
+        color: $color-blue;
+    }
+
+    &__brands {
+        display: flex;
+        margin-top: 50px;
+        font-size: 0;
+    }
+
+    &__brand {
+        flex: 0 1 25%;
+
+        path {
+            transition: all 0.2s ease-out;
+        }
+
+        &:hover {
+            path {
+                fill: $color-blue;
+            }
+        }
+    }
+}
