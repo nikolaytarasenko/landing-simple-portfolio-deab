@@ -1,0 +1,92 @@
+.form {
+    display: flex;
+    padding-top: 9px;
+
+    &__data {
+        flex-grow: 1;
+        padding: 0 30px;
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        line-height: 1.06rem;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    &__input {
+        position: relative;
+        border: 0;
+        padding: 10px 0;
+
+        &:focus + .form__underline::before {
+            width: 100%;
+            left: 0;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+
+        &::placeholder {
+            color: $color-light-gray;
+            font-size: 1.06rem;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &__underline {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: $color-light-gray;
+        transition: all 0.2s ease-in-out;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 50%;
+            bottom: 0;
+            background: $color-blue;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &__submit {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        border-radius: 50%;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            .form__circle {
+                fill: $color-blue;
+            }
+        }
+    }
+
+    &__circle {
+        transition: all 0.1s ease-in-out; 
+    }
+}

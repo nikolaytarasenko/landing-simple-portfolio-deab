@@ -1,0 +1,21 @@
+.social {
+    display: flex;
+    align-items: center;
+    
+    &__link {
+        margin: 0 15px;
+        font-size: 0;
+        vertical-align: middle;
+    
+        svg {
+            transition: all 0.1s linear;
+        }
+    
+        &:hover {
+            svg {
+                fill: $color-blue;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
