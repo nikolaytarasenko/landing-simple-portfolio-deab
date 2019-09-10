@@ -21,6 +21,7 @@ function showMenu() {
         menu.classList.add('mainMenu');
     } else {
         menu.classList.remove('mainMenu');
+        document.body.style.overflow = 'auto';
     }
 }
 
