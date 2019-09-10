@@ -1,0 +1,28 @@
+.footer {
+    &__container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        margin: 100px 0 50px;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        font-size: 1.06rem;
+        font-weight: 600;
+    }
+
+    &__link {
+        font-size: 1.06rem;
+        font-weight: 600;
+        color: $color-gray;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: $color-blue;
+        }
+    }
+}
