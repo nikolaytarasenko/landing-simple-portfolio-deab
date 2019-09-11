@@ -39,6 +39,7 @@
         position: relative;
         overflow: hidden;
 
+        &:active,
         &:hover {
             .project__title {
                 color: #fff;
